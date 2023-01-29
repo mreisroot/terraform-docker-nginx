@@ -1,3 +1,4 @@
+# Definir a fonte do provider
 terraform {
   required_providers {
     docker = {
@@ -7,13 +8,16 @@ terraform {
   }
 }
 
+# Definir o provider
 provider "docker" {}
 
+# Provisionar a imagem do NGINX
 resource "docker_image" "nginx" {
   name         = "nginx:latest"
   keep_locally = false
 }
 
+# Provisionar o container do NGINX
 resource "docker_container" "nginx" {
   image = docker_image.nginx.repo_digest
   name = "websrv"
