@@ -2,7 +2,7 @@
 terraform {
   required_providers {
     docker = {
-      source = "kreuzwerker/docker"
+      source  = "kreuzwerker/docker"
       version = "~> 3.0.1"
     }
   }
@@ -20,7 +20,7 @@ resource "docker_image" "nginx" {
 # Provisionar o container do NGINX
 resource "docker_container" "nginx" {
   image = docker_image.nginx.repo_digest
-  name = "websrv"
+  name  = "websrv"
   ports {
     internal = 80
     external = 8080
