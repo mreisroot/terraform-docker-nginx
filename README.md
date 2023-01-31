@@ -2,7 +2,7 @@
 
 Neste projeto, há a criação de um container Docker do servidor web NGINX através do Terraform.
 
-## Preparando e executando a automação
+## Preparando a automação
 
 1. [Instale o Docker em sua máquina](https://docs.docker.com/get-docker/)
 
